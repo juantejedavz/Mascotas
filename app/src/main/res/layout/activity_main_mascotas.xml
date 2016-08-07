@@ -7,7 +7,7 @@
     tools:context="mx.blogspot.juanmtejedav.mascotas.MainMascotas">
 
     <include
-        android:id="@+id/toolB"
+        android:id="@+id/toolB1"
         layout="@layout/toolbar" >
     </include>
 
@@ -15,7 +15,7 @@
         android:id="@+id/rvMascotas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolB"
+        android:layout_below="@id/toolB1"
         android:padding="18dp" />
 
 </RelativeLayout>

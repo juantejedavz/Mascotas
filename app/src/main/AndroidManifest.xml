@@ -16,8 +16,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MascotasFav"
-            android:parentActivityName=".MainMascotas">
+            android:name="mx.blogspot.juanmtejedav.mascotas.MascotasFav"
+            android:parentActivityName="mx.blogspot.juanmtejedav.mascotas.MainMascotas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mx.blogspot.juanmtejedav.mascotas.MainMascotas">
+            </meta-data>
         </activity>
     </application>
 

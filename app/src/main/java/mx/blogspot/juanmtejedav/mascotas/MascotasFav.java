@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -17,13 +18,15 @@ public class MascotasFav extends AppCompatActivity {
     ArrayList<Mascota> mascotasFav;
     private RecyclerView listaMascotasFav;
     private LinearLayoutManager llm;
+    Toolbar miActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mascota_fav);
 
-        Toolbar miActionBar = toolbar(R.id.miActionBar);
+       toolbar(miActionBar);
+
 
         listaMascotasFav = (RecyclerView) findViewById(R.id.rvMascotasFav);
 
@@ -43,7 +46,6 @@ public class MascotasFav extends AppCompatActivity {
     public void inicializarVistasFav(){
         Bundle extras = getIntent().getExtras();
         mascotasFav = (ArrayList<Mascota>) extras.getSerializable(getResources().getString(R.string.arrayMascotas));
-      //  Collections.sort(mascotasFav.)
     }
 
     public void inicializarAdaptador(){
@@ -52,10 +54,18 @@ public class MascotasFav extends AppCompatActivity {
     }
 
 
-    public Toolbar toolbar(int id) {
-        Toolbar t = (Toolbar) findViewById(id);
-        setSupportActionBar(t);
-        return t;
+    public void toolbar(Toolbar miActionBar) {
+        miActionBar = (Toolbar) findViewById(R.id.toolB2);
+        setSupportActionBar(miActionBar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        miActionBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 
@@ -66,5 +76,6 @@ public class MascotasFav extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }
 

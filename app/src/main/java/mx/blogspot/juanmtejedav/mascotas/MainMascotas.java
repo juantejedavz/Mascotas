@@ -22,7 +22,7 @@ public class MainMascotas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_mascotas);
 
-        Toolbar miActionBar = toolbar(R.id.miActionBar);
+        Toolbar miActionBar = toolbar(R.id.toolB1);
 
         listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
 

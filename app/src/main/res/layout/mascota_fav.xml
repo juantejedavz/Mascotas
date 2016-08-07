@@ -6,10 +6,11 @@
     tools:context="mx.blogspot.juanmtejedav.mascotas.MascotasFav">
 
     <include
-        android:id="@id/toolB"
+        android:id="@+id/toolB2"
         layout="@layout/toolbar_fav" />
 
     <TextView
+        android:id="@+id/tvMasc"
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +23,7 @@
         android:id="@+id/rvMascotasFav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolB"
+        android:layout_below="@id/tvMasc"
         android:padding="18dp" />
 
 </LinearLayout>
